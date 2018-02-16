@@ -151,7 +151,8 @@ function [payoffs, frac_coops, frac_game1] = ...
         ];
 
     % Q is stochastic, guranteed to have eigenvector v w/ eigenvalue 1
-    % v satisfies M'v = v, i.e. (M' - I)v = 0.
+    % v satisfies Q'v = v, i.e. (Q' - I)v = 0.
+    v = null(Q'-eye(size(Q)));
     
     % largest magnitude = 1 -> lamda = 1 or -1, so get the 2 largest magnitudes
     % [V, D] = eigs(Q', 1);
@@ -162,7 +163,6 @@ function [payoffs, frac_coops, frac_game1] = ...
     %    v = V(:,2);
     % end
     
-    v = null(Q'-eye(size(Q)));
     
     % v = stationary dist., make it positive, L1 normalize, make into row
     v = abs(v)/norm(v, 1);

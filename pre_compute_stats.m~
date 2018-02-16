@@ -1,0 +1,16 @@
+% precompute avg. payoff, cooperation freq., time in game1
+function = precompute_stats(game1, game2, strategy1, strategy2, eps)
+    
+    num_strategies = 2^12;
+    payoffs      = zeros(num_strategies, num_strategies);
+    frac_coops   = zeros(num_strategies, num_strategies);
+    frac_game1s  = zeros(num_strategies, num_strategies);
+    
+    function strat = num_to_strat(num)
+        strat = de2bi(num);
+        if size(strat,2) < 12
+            strat(12) = 0; % extend strategy to be a 12 component vector
+        end
+        s
+    for 
+end

@@ -1,0 +1,15 @@
+Get_Payoffs.m
+
+% game1 payoff matrix given by b1, c1. Game 1 is high stakes.
+% game2 payoff matrix given by b2, c2. Game 2 is default.
+
+% strategy = 12 vals: 4 each for game1, game 2, and transition strategy.
+
+% player 1's strategy = [p1 p2 x]:
+% p1 = [p1_cc, ... p1_dd], p2 = [p2_cc, ... p2_dd], x = [x_cc, ... x_dd]
+
+% similarly, player 2's strategy is [q1 q2 y].
+
+% output = stationary values for 
+% strategy 1's avg. payoff, strategy 2's payoff, frac. player 1 coop,
+% fraction player 2 coop, and overall fraction in game1.
